@@ -60,5 +60,5 @@ Benchee.run(
   jobs,
   formatters: [Benchee.Formatters.Console],
   time: time,
-  before_each: fn _ -> Repo.delete_all(BenchSchema) end
+  before_scenario: fn _ -> Repo.query!("truncate bench") end
 )
