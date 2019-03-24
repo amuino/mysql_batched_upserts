@@ -4,6 +4,6 @@ defmodule BenchSchema do
   schema "bench" do
     field(:key, :string)
     field(:value, :string)
-    timestamps
+    timestamps()
   end
 end
